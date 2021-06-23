@@ -65,5 +65,8 @@ class Modeling():
         except Exception as error:
             print(f"ERROR!\n {error}")
 
+def main():
+    Modeling().save_xml()
 
-Modeling().save_xml()
+if __name__ == "__main__":
+    main()
