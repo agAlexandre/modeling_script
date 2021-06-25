@@ -7,7 +7,7 @@ from xml_template import *
 class Modeling():
     def __init__(self):
         self.path = os.path.dirname(inspect.getfile(self.__class__))
-        self.filename = f'{self.path}/sql.csv'
+        self.filename = f'{self.path}sql.csv'
         self.xmlFull = xmlTemplate
 
     def read_csv(self):
@@ -61,7 +61,7 @@ class Modeling():
             size = 100-(100 - len(diagram))
             data_null = {f"name{n}":"null" for n in range(size, 101)}
             diagram.update(data_null)
-            open(f'{self.path}/demofile.xml','a+').write(self.xmlFull%diagram)
+            open(f'{self.path}demofile.xml','a+').write(self.xmlFull%diagram)
         except Exception as error:
             print(f"ERROR!\n {error}")
 
